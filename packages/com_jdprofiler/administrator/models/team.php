@@ -157,7 +157,7 @@ class JdprofilerModelTeam extends JModelAdmin
 			throw new Exception(JText::_('JERROR_CORE_CREATE_NOT_PERMITTED'));
 		}
 
-		$dispatcher = JEventDispatcher::getInstance();
+		$dispatcher = \Joomla\CMS\Factory::getApplication();
 		$context    = $this->option . '.' . $this->name;
 
 		// Include the plugins for the save events.
